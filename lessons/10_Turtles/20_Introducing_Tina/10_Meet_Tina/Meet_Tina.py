@@ -11,9 +11,8 @@ window
 You won't understand what this program is doing just
 yet, but don't worry, that's what you will be
 learning in the next few lessons.
-"""
-
-import turtle                           # Tell Python we want to work with the turtle
+"""                   # Tell Python we want to work with the turtle
+import turtle
 turtle.setup(600,600,0,0)               # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
