@@ -30,30 +30,30 @@ tina.pencolor('blue')                   # Set the pen color to blue
 tina.forward(200)                       # Move tina forward by the forward distance
 tina.right(90)                          # Turn tina left by the left turn
 
-tina.pencolor('red')                    # Set the pen color to red
+tina.pencolor('yellow')                    # Set the pen color to red
 tina.forward(200)                       # Continue the last two steps three more times
 tina.right(90)                          # to draw a square
 
-tina.pencolor('green')                  # Set the pen color to green
+tina.pencolor('orange')
 tina.forward(200)
 tina.right(90)
 
-tina.pencolor('purple')                 # Set the pen color to purple
+tina.pencolor('cyan')                 # Set the pen color to purple
 tina.forward(200)
-tina.right(90)
+tina.left(90)
 
 ##
 ## Draw a Circle
 ##
 
 tina.penup()     
-tina.goto(0, -75)
+tina.goto(0, -1)
 tina.pendown()     
 
 tina.pendown()
-tina.color('red')                       # Set the color of tina to red
+tina.color('grey')                       # Set the color of tina to red
 tina.begin_fill()
-tina.circle(75)
+tina.circle(50)
 tina.end_fill()
 
 ##
@@ -61,12 +61,12 @@ tina.end_fill()
 ##
 
 tina.penup()                            # Lift the pen up so we can move tina without drawing
-tina.goto(-50, -150)
+tina.goto(-250, -150)
 tina.forward(20)                        # Move tina forward by 20
 tina.left(90)                           # Turn tina left by 90 degrees
 tina.forward(20)                        # Move tina forward by 20
-tina.write("Why, hello there!")         # Write the message "Why, hello there!"
-tina.backward(20)                       # Move tina backward by 20
+tina.write("Estrada Sophie, 25-02-2026")         # Write the message "Why, hello there!"
+tina.forward(20)                       # Move tina backward by 20
 
 turtle.exitonclick()                    # Close the window when we click on it  
 
