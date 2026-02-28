@@ -40,8 +40,8 @@ def draw_leg(t, a, r=170, w=40, l=50):
     t.setheading(a)                      # Set the heading of tina to the angle
     t.forward(r)                         # Move tina forward by the radius
     t.pendown()
-    t.pencolor('brown')                  # Set the pen color to brown
-    t.fillcolor('brown')                 # Set the fill color to brown
+    t.pencolor('red')                  # Set the pen color to brown
+    t.fillcolor('red')                 # Set the fill color to brown
     t.begin_fill()
     t.left(90)                           # Turn tina left by 90 degrees
     t.forward(w/2)                       # Move tina forward by half the width
@@ -60,8 +60,8 @@ def draw_head():
     tina.penup()
     tina.goto(0, head_pos()-20)          # Move tina to the head position
     tina.pendown()
-    tina.pencolor('brown')               # Set the pen color to brown
-    tina.fillcolor('brown')              # Set the fill color to brown
+    tina.pencolor('red')               # Set the pen color to brown
+    tina.fillcolor('red')              # Set the fill color to brown
     tina.begin_fill()
     tina.circle(50)                      # Draw a circle with radius 50
     tina.end_fill()
