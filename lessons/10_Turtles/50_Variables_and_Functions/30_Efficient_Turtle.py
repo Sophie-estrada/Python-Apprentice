@@ -12,33 +12,19 @@ turtle.setup(600,600,0,0)               # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.speed(2) 
+                          # Make the turtle move as fast, but not too fast. 
+tina.begin_fill()
+tina.fillcolor("blue violet")
+tina.pencolor("blue violet")
 
-def draw_polygon(sides):6
-sides=6
-angle = 360/sides                       # Calculate angle from number of sides
-    
-for i in range(6):                 # Loop through the number of sides
-        tina.forward(150)                            # Move tina forward by the forward distance
-        tina.left(angle)                       # Turn tina left by the left turn
+def draw_shape(dist, side, tina):
+        for _ in range(side):
+         tina.forward(dist)
+         tina.left(360/side)
 
-draw_polygon(4)                        # Draw a square
-def draw_polygon(sides):6
-sides=4
-angle = 360/sides                       # Calculate angle from number of sides
-    
-for i in range(6):                 # Loop through the number of sides
-        tina.forward(150)                            # Move tina forward by the forward distance
-        tina.left(angle)                                          # Move tina to another spot on the screen
+draw_shape(85, 12, tina)
+tina.end_fill()
 
-draw_polygon(5)                        # Draw a pentagon
-def draw_polygon(sides):6
-sides=5
-angle = 360/sides                       # Calculate angle from number of sides
-    
-for i in range(6):                 # Loop through the number of sides
-        tina.forward(150)                            # Move tina forward by the forward distance
-        tina.left(angle)     
-                                  # Move tina to another spot on the screen
 
 turtle.exitonclick()                     # Close the window when we click on it
