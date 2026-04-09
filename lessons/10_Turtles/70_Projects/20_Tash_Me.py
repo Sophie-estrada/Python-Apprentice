@@ -22,33 +22,26 @@ def set_background_image(window, image_name):
     window.setup(image.width, image.height, startx=0, starty=0)
     window.bgpic(image_path)
 
-# Set up the screen
-import turtle                           # Tell Python we want to work with the turtle
-turtle.setup(width=600, height=600)     # Set the size of the window
-tina = turtle.Turtle()                 # Create a turtle named tina
-screen = turtle.Screen()
-set_background_image(screen, "emoji.png") # Set the background image of the screen
+def set_turtle_image(turtle, image_name):
+    """Set the turtle's shape to a custom image."""
+
+    from pathlib import Path
+    image_dir = Path(__file__).parent.parent / "images"
+    image_path = str(image_dir / image_name)
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    turtle.shape(image_path)
+
 # Set up the screen
 screen = turtle.Screen()
 screen.setup(width=600, height=600)
 
 # Create a turtle and set its shape to the custom GIF
 t = turtle.Turtle()
-def set_turtle_image(turtle, image_name):
-    """Set the turtle's shape to a custom image."""
-
-    from pathlib import Path
-    image_dir = Path(__file__).parent / "images"
-    image_path = str(image_dir / image_name)
-
-    screen = turtle.getscreen()
-    screen.addshape(image_path)
-    turtle.shape(image_path)
-set_turtle_image(t, "moustache.gif")
-
-t.penup()
-t.speed(3)
-tina.shape("circle")
-tina.goto(0, 50)
-
+set_turtle_image(t, "pikachu.gif")
+set_background_image(screen, "emoji.png") # Set the background image of the screen
+t.penup() # Lift the pen to avoid drawing lines
+t.forward(100) # Move the turtle forward to position it correctly on the emoji
+t.right(90) # Rotate the turtle to the right
 turtle.exitonclick()
