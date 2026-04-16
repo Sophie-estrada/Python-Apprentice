@@ -59,6 +59,7 @@ def turtle_clicked(t, x, y):
     
     for i in range(0,360, 20): # Full circle, 20 degrees at a time
         t.left(20) # Tilt the turtle 20 degrees
+        t.forward(10) # Move the turtle forward a little bit to make the twirl more visible
 set_turtle_image(t, "pikachu.gif")
 set_background_image(screen, "emoji.png") # Set the background image of the screen
 # Connect the turtle to the turtle_clicked function
