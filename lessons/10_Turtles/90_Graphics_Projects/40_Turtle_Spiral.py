@@ -9,9 +9,11 @@ import turtle
 # Returns a random color!
 def getRandomColor():
     return "#%06X" % (random.randint(0, 0xFFFFFF))
+def getNextColor(i):
+    return colors[i % len(colors)]
 
 window = turtle.Screen()
-window.bgcolor("white")
+window.bgcolor("black")
 
 # Make a new turtle
 myTurtle = turtle.Turtle()
@@ -23,19 +25,20 @@ myTurtle.shape("turtle")
 myTurtle.speed(0)
 
 # Set your turtle's color
-myTurtle.color("green")
-
+myTurtle.color("medium slate blue")
+colors = ("turquoise", "sky blue", "violet", "blue violet", "cornflower blue")
 # Use a loop to repeat the code below 50 times
-for i in range(50):
 
+for i in range(1000):
+    myTurtle.pensize(1)
     # Set the turtle color to a random color
-    myTurtle.pencolor(getRandomColor())
+    myTurtle.pencolor(getNextColor(i))
 
     # Move the turtle (5*i) pixels. 'i' is the loop variable
-    myTurtle.forward(9 * i)
+    myTurtle.forward(1 * i)
 
     # Turn the turtle (360/7) degrees to the right
-    myTurtle.right(360 / 7 + i*5)
+    myTurtle.right(360 / 7)
 
     # Change the turtle width to 'i' (the loop variable)
     myTurtle.width(i)
