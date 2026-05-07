@@ -21,19 +21,37 @@ you can ask for a string with simpledialog.askstring().
 """
 
 # Import the required modules
-
+from tkinter import * 
 # Create a window object
-
+window = Tk()
+window.title("Infuriating Calculator")
 # Hide the window, hint: use the withdraw method
-
+window.withdraw()
+import tkinter.simpledialog as simpledialog
+import tkinter.messagebox as messagebox
 # Ask the user for the first number   
-
+first_number = simpledialog.askfloat("First Number", "Enter the first number:")
 # Ask the user for the second number
-
+second_number = simpledialog.askfloat("Second Number", "Enter the second number:")
 # Ask the user for the math operation
+operation = simpledialog.askstring("Math Operation", "Enter the math operation (add, subtract, multiply, divide):")
 
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
-
-# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
-
-# Keep the window open
+if operation == "add":
+    result = first_number + second_number
+    messagebox.showinfo("Result", f"The result of {first_number} + {second_number} is: {result}")
+elif operation == "subtract":
+    result = first_number - second_number
+    messagebox.showinfo("Result", f"The result of {first_number} - {second_number} is: {result}")
+elif operation == "multiply":
+    result = first_number * second_number
+    messagebox.showinfo("Result", f"The result of {first_number} * {second_number} is: {result}")
+elif operation == "divide":    
+    if second_number != 0:
+        result = first_number / second_number
+        messagebox.showinfo("Result", f"The result of {first_number} / {second_number} is: {result}")
+    else:
+        messagebox.showerror("Error", "Cannot divide by zero.")
+else:
+    messagebox.showerror("Error", "Unknown operation. Please enter add, subtract, multiply, or divide.")
+    
