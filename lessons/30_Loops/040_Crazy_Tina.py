@@ -16,7 +16,7 @@ turtle.setup(600,600,0,0)               # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.speed(20)                           # Make the turtle move as fast, but not too fast. 
 
 forwards = [ 10, 20, 30, 40, 50, 60, 70, 80 ]
 lefts = [ 45, 90, 135, 180, 225, 270, 315, 360 ]

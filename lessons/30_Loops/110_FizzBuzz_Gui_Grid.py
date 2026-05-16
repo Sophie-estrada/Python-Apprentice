@@ -27,7 +27,6 @@ Or to display a badger:
 HINT: You can use % and // to get the first and last digit of a number, 
 or you can convert the number to a string and iterate over the digits
 """
-
 from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
